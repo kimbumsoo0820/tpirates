@@ -1,0 +1,17 @@
+{
+    "sort": [
+      {
+        "name": "수산시장",
+        "active": true
+      },
+      {
+        "name": "쇼핑몰",
+        "active": false
+      },
+      {
+        "name": "도매",
+        "active": false
+      }
+    ]
+  }
+  
