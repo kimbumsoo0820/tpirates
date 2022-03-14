@@ -35,10 +35,10 @@ const Header = () => {
 };
 
 const HeaderWrap = styled.div`
-  padding: 0 16px;
+  padding: 0 12px;
 `;
 const HeaderLogoLineDiv = styled.div`
-  width: 388px;
+  width: 100%;
   height: 56px;
   display: flex;
   justify-content: space-between;
@@ -56,7 +56,7 @@ const Logo = styled.img`
   user-select: none;
 `;
 const StringDiv = styled.div`
-  width: 237px;
+  width: 100%;
   display: flex;
   margin-left: 50px;
 `;
@@ -82,7 +82,7 @@ const SearchDiv = styled.div`
 
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  /* padding: 0 12px; */
 `;
 
 const SearchIcon = styled.img`

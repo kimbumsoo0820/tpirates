@@ -1,8 +1,8 @@
 /* eslint-disable */
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import BannerData from "../../data/bannerData.json";
+import BannerData from "../../../data/bannerData.json";
 
 const RollingBanner = () => {
   const [BannerDataSet, SetBannerDataSet] = React.useState(0);
@@ -22,7 +22,7 @@ const RollingBanner = () => {
       } else {
         SetBannerDataSet(BannerDataSet + 1);
       }
-    }, 2500);
+    }, 2200);
   }, [DropDownTrueOrFalse, BannerDataSet]);
   return (
     <OutWrap>
@@ -76,14 +76,14 @@ const OutWrap = styled.div`
 
 const Wrap = styled.div`
   display: flex;
-  width: 420px;
+  width: 100%;
   height: 35px;
   margin: 0;
   background-color: #1c79bc;
 `;
 
 const RollingBannerDiv = styled.div`
-  width: 390px;
+  width: 380px;
   height: 35px;
   margin: 0;
   overflow: hidden;
@@ -134,7 +134,7 @@ const RollingStringSub = styled.p`
 
 const DownOrUpArrow = styled.p`
   color: white;
-  width: 20px;
+  /* width: 20px; */
   font-size: 18px;
   display: flex;
   justify-content: center;
