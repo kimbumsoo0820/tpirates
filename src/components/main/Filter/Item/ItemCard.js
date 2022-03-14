@@ -20,6 +20,7 @@ const ItemCard = (props) => {
         <RegionButton
           onClick={() => {
             selectItem(Item.label);
+            props.getFilter2();
           }}
         >
           {Item.label}

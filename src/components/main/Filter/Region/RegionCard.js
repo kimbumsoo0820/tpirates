@@ -46,6 +46,7 @@ const RegionCard = (props) => {
                         key={locations.code}
                         {...locations}
                         selectedZone={selectedZone}
+                        getFilter={props.getFilter}
                       />
                     );
                   })}

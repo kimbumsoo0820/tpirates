@@ -5,13 +5,19 @@ import styled from "styled-components";
 import itemData from "../../../../data/itemData.json";
 import ItemCard from "./ItemCard";
 
-const Item = () => {
+const Item = (props) => {
   // console.log(itemData);
 
   return (
     <ButtonDiv>
       {itemData.map((item) => {
-        return <ItemCard key={item.label} {...item}></ItemCard>;
+        return (
+          <ItemCard
+            key={item.label}
+            {...item}
+            getFilter2={props.getFilter2}
+          ></ItemCard>
+        );
       })}
     </ButtonDiv>
   );

@@ -21,6 +21,7 @@ const RegionLocation = (props) => {
       <RegionButtonUnder
         onClick={() => {
           clickLocations(label);
+          props.getFilter();
         }}
       >
         {label}

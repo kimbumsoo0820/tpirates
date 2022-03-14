@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import RegionCard from "./RegionCard";
 
 const Region = (props) => {
+  // console.log(props);
   const nowZone = props.nowZone;
 
   const foundZone = zoneData.find((element) => element.label === nowZone);
@@ -21,6 +22,7 @@ const Region = (props) => {
             {...zoneData}
             nowZone={nowZone}
             foundZone={foundZone}
+            getFilter={props.getFilter}
           />
         );
       })}

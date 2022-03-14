@@ -16,9 +16,9 @@ const getLabelCode = createAction(GET_LABEL_CODE, (data) => ({ data }));
 
 const initialState = {
   filter: "",
-  zone: "모든 지역 ▼",
+  zone: "모든 지역",
   zoneCode: "",
-  item: "모든품목 ▼",
+  item: "모든품목",
   itemCode: "",
 };
 
