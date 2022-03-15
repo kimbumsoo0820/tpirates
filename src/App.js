@@ -31,12 +31,12 @@ const BackGround = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
+  overflow: auto;
 `;
 const MobileView = styled.div`
   width: 420px;
   background-color: white;
   height: 100vh;
-  overflow: auto;
 `;
 
 export default App;

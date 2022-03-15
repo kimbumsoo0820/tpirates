@@ -19,12 +19,24 @@ const Filter = () => {
   const nowItem = useSelector(filterItem);
 
   const getFilter = (nowState) => {
-    dispatch(filterAction.getFilter(nowState));
-    setCheckSelected(!checkSelected);
+    if (checkSelected === true) {
+      dispatch(filterAction.getFilter(null));
+      setCheckSelected(!checkSelected);
+    }
+    if (checkSelected === false) {
+      dispatch(filterAction.getFilter(nowState));
+      setCheckSelected(!checkSelected);
+    }
   };
   const getFilter2 = (nowState) => {
-    dispatch(filterAction.getFilter(nowState));
-    setCheckSelected2(!checkSelected2);
+    if (checkSelected2 === true) {
+      dispatch(filterAction.getFilter(null));
+      setCheckSelected2(!checkSelected2);
+    }
+    if (checkSelected2 === false) {
+      dispatch(filterAction.getFilter(nowState));
+      setCheckSelected2(!checkSelected2);
+    }
   };
   return (
     <div>

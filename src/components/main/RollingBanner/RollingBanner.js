@@ -72,6 +72,7 @@ const RollingBanner = () => {
 
 const OutWrap = styled.div`
   display: block;
+  margin-top: 100px;
 `;
 
 const Wrap = styled.div`

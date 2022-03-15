@@ -5,22 +5,23 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 
 import { filterAction } from "../../../../redux/modules/filter";
-import { getZone } from "../../../../redux";
 
 const RegionLocation = (props) => {
   const dispatch = useDispatch();
-  console.log(props);
+  // console.log(props);
   const label = props.label;
+  const code = props.code;
 
-  const clickLocations = (location) => {
+  const clickLocations = (location, code) => {
     dispatch(filterAction.getZone(location));
+    dispatch(filterAction.getZoneCode(code));
   };
 
   return (
     <div>
       <RegionButtonUnder
         onClick={() => {
-          clickLocations(label);
+          clickLocations(label, code);
           props.getFilter();
         }}
       >

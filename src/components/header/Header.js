@@ -36,6 +36,10 @@ const Header = () => {
 
 const HeaderWrap = styled.div`
   padding: 0 12px;
+  position: fixed;
+  width: 396px;
+  background-color: white;
+  z-index: 10000000;
 `;
 const HeaderLogoLineDiv = styled.div`
   width: 100%;

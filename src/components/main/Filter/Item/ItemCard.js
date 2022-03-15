@@ -7,11 +7,12 @@ import { filterAction } from "../../../../redux/modules/filter";
 
 const ItemCard = (props) => {
   const dispatch = useDispatch();
-  console.log(props);
+  //   console.log(props);
   const Item = props;
 
-  const selectItem = (item) => {
+  const selectItem = (item, code) => {
     dispatch(filterAction.getLabel(item));
+    dispatch(filterAction.getLabelCode(code));
   };
 
   return (
@@ -19,7 +20,7 @@ const ItemCard = (props) => {
       <ButtonDiv>
         <RegionButton
           onClick={() => {
-            selectItem(Item.label);
+            selectItem(Item.label, Item.code);
             props.getFilter2();
           }}
         >

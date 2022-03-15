@@ -1,0 +1,88 @@
+[
+  {
+    "description": "인천종합연안부두갑각류센터 삼우수산",
+    "uri": "/인천종합연안부두갑각류센터삼우수산",
+    "state": "OPEN",
+    "tags": [
+      "today-price"
+    ],
+    "id": "0000001006",
+    "label": "삼우수산",
+    "thumbnail": "https://cdn.tpirates.com/files/etc/2019/0716/05a58439546b13bcb9ce8b5e92cb3100_FThumb.jpg",
+    "summary": {
+      "comments": 268,
+      "rating": 4.8
+    },
+    "market": "인천종합(연안부두)갑각류센터",
+    "favorite": "off"
+  },
+      {
+        "description": "초심을 잃지 않는 가락몰 보은수산",
+        "uri": "/가락시장보은수산",
+        "state": "OPEN",
+        "tags": [
+          "today-price"
+        ],
+        "id": "0000001055",
+        "label": "보은수산",
+        "thumbnail": "https://cdn.tpirates.com/files/etc/2020/0604/4ad90c52607574cd3a33d43a74dd5a8c_FThumb.jpg",
+        "summary": {
+          "comments": 93,
+          "rating": 4.5
+        },
+        "market": "가락시장",
+        "favorite": "off"
+      },
+      {
+        "description": "젊은 사장님이 운영하는 트렌디한 킹크랩 전문점 ",
+        "uri": "/가락시장싱싱해수산",
+        "state": "OPEN",
+        "tags": [
+          "day-delivery",
+          "today-price"
+        ],
+        "id": "0000000200",
+        "label": "싱싱해수산",
+        "thumbnail": "https://cdn.tpirates.com/files/etc/2018/1120/ae16296a2d89bbe3cc61aab78204081a_FThumb.jpg",
+        "summary": {
+          "comments": 3975,
+          "rating": 4.7
+        },
+        "market": "가락시장",
+        "favorite": "off"
+      },
+      {
+        "description": "대포항수산시장 횟집 찬우활어",
+        "uri": "/속초대포항수산시장찬우활어",
+        "state": "OPEN",
+        "tags": [
+          "today-price"
+        ],
+        "id": "0000000353",
+        "label": "찬우활어",
+        "thumbnail": "https://cdn.tpirates.com/files/etc/2018/1120/deb64a052eb755e820a23387fe0cada6_FThumb.jpg",
+        "summary": {
+          "comments": 210,
+          "rating": 4.8
+        },
+        "market": "속초대포항수산시장",
+        "favorite": "off"
+      },
+      {
+        "description": "대전 노은동수산시장 활어회 전문 횟집 ",
+        "uri": "/대전노은동농수산물시장서해수산",
+        "state": "OPEN",
+        "tags": [
+          "today-price"
+        ],
+        "id": "0000000212",
+        "label": "서해수산",
+        "thumbnail": "https://cdn.tpirates.com/files/etc/2018/1127/e6f73469cef3e70e529b21de3387895c_FThumb.jpg",
+        "summary": {
+          "comments": 492,
+          "rating": 4.4
+        },
+        "market": "대전노은동농수산물시장",
+        "favorite": "off"
+      }
+]
