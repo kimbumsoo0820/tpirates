@@ -11,17 +11,23 @@ const ItemCard = (props) => {
   const Item = props;
 
   const selectItem = (item, code) => {
-    dispatch(filterAction.getLabel(item));
-    dispatch(filterAction.getLabelCode(code));
+    if (item !== null) {
+      // console.log(item);
+      dispatch(filterAction.getLabel(item));
+      dispatch(filterAction.getLabelCode(code));
+    }
   };
 
   return (
     <div>
       <ButtonDiv>
         <RegionButton
+          clickAble={Item.label}
           onClick={() => {
-            selectItem(Item.label, Item.code);
-            props.getFilter2();
+            if (Item.label !== null) {
+              selectItem(Item.label, Item.code);
+              props.getFilter2();
+            }
           }}
         >
           {Item.label}
@@ -39,12 +45,12 @@ const ButtonDiv = styled.div`
 const RegionButton = styled.button`
   display: flex;
   background-color: white;
-  width: 135px;
+  width: 140px;
   height: 85px;
   border: 1px solid #dddddd;
   color: #777777;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: ${(props) => (props.clickAble ? "pointer" : null)}; ;
 `;
 export default ItemCard;

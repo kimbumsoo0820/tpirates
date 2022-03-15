@@ -14,12 +14,13 @@ export default class SimpleSlider extends Component {
       dots: true,
       infinite: true,
       lazyLoad: true,
-      speed: 500,
+      speed: 200,
       slidesToShow: 1,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     };
+
     return (
       <Wrap>
         <Slider {...settings}>
@@ -32,7 +33,12 @@ export default class SimpleSlider extends Component {
                       {data.label} &nbsp;{" "}
                       <PmediumDark>{data.market}</PmediumDark>{" "}
                     </PLargest>
-                    <PmediumDark>전일시세</PmediumDark>{" "}
+                    {data.state === "OPEN" && (
+                      <PmediumDark>오늘시세</PmediumDark>
+                    )}
+                    {data.state === "CLOSED" && (
+                      <PmediumDark>전일시세</PmediumDark>
+                    )}{" "}
                   </SlickDecDivFlexBetween>
                   <SlickDecDivFlexBetween>
                     <PmediumGray>{data.description}</PmediumGray>{" "}

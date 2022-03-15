@@ -1,17 +1,32 @@
 /* eslint-disable */
 import React from "react";
 import styled from "styled-components";
+import { history } from "../../../redux/configureStore";
+import { useSelector, useDispatch } from "react-redux";
+import { nowPageAction } from "../../../redux/modules/nowPage";
 
 const StoreCard = (props) => {
   //   console.log(props);
+  const dispatch = useDispatch();
   const thumbnail = props.thumbnail;
   const label = props.label;
   const description = props.description;
   const market = props.market;
   const uri = props.uri;
   const summary = props.summary;
+  const openClose = props.state;
+
+  const clickStore = () => {
+    dispatch(nowPageAction.getNowPage("storePage"));
+    history.push(`${uri}`);
+  };
+
   return (
-    <Wrap>
+    <Wrap
+      onClick={() => {
+        clickStore();
+      }}
+    >
       <StoreImg src={thumbnail} />
       <DesWrapDiv>
         <DisplayBlockDiv>
@@ -24,7 +39,8 @@ const StoreCard = (props) => {
             <Rating>
               ⭐{summary.rating} <Comment>({summary.comments})</Comment>
             </Rating>
-            <TodayPrice>오늘시세</TodayPrice>
+            {openClose === "OPEN" && <TodayPrice>오늘시세</TodayPrice>}
+            {openClose === "CLOSED" && <TodayPrice>전일시세</TodayPrice>}
           </RatingLine>
         </DisplayBlockDiv>
       </DesWrapDiv>

@@ -13,7 +13,7 @@ const Item = (props) => {
       {itemData.map((item) => {
         return (
           <ItemCard
-            key={item.label}
+            key={item.code}
             {...item}
             getFilter2={props.getFilter2}
           ></ItemCard>

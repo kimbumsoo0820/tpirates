@@ -46,16 +46,16 @@ const Filter = () => {
             getFilter("zone");
           }}
         >
-          {nowZone} ▼
+          {nowZone} ▾
         </FilterButton>
         <FilterButton
           onClick={() => {
             getFilter2("label");
           }}
         >
-          {nowItem} ▼
+          {nowItem} ▾
         </FilterButton>
-        <FilterButton>기본 순 ▼</FilterButton>
+        <FilterButton>기본 순 ▾</FilterButton>
       </ButtonDiv>
       <Lists>
         {FilterNow === "zone" && checkSelected && (

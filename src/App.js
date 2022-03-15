@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainPage from "./components/main/MainPage";
 import Header from "./components/header/Header";
 
+import StorePage from "./components/main/StorePage";
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
           <ConnectedRouter history={history}>
             <Switch>
               <Route path="/" exact component={MainPage} />
+              <Route path="/:uri" exact component={StorePage} />
             </Switch>
           </ConnectedRouter>
         </MobileView>

@@ -6,11 +6,15 @@ import { connectRouter } from "connected-react-router";
 
 import Filter from "./modules/filter";
 import Data from "./modules/data";
+import ScrollPage from "./modules/scrollPage";
+import NowPage from "./modules/nowPage";
 
 export const history = createBrowserHistory();
 const rootReducer = combineReducers({
   filter: Filter,
   data: Data,
+  scrollPage: ScrollPage,
+  nowPage: NowPage,
   router: connectRouter(history),
 });
 
