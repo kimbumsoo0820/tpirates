@@ -5,6 +5,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 
+import { history } from "../../../redux/configureStore";
+
 import slickData from "../../../data/slickData.json";
 
 export default class SimpleSlider extends Component {
@@ -20,13 +22,21 @@ export default class SimpleSlider extends Component {
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
     };
+    const PageMove = (uri) => {
+      history.push(`${uri}`);
+    };
 
     return (
       <Wrap>
         <Slider {...settings}>
           {slickData.map((data) => {
             return (
-              <div key={data.id}>
+              <div
+                key={data.id}
+                onClick={() => {
+                  PageMove(data.uri);
+                }}
+              >
                 <SlickDecWrapDivBlock>
                   <SlickDecDivFlexBetween>
                     <PLargest>
@@ -126,9 +136,9 @@ const StoreImgDiv = styled.div`
   width: 100%;
 `;
 const StoreImg = styled.img`
-  width: 100%;
-  height: 230px;
-  /* object-fit: cover; */
+  width: 420px;
+  height: 300px;
+  object-fit: cover;
 `;
 
 function SampleNextArrow(props) {

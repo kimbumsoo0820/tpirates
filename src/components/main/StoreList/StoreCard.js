@@ -17,7 +17,7 @@ const StoreCard = (props) => {
   const openClose = props.state;
 
   const clickStore = () => {
-    dispatch(nowPageAction.getNowPage("storePage"));
+    // dispatch(nowPageAction.getNowPage("storePage"));
     history.push(`${uri}`);
   };
 

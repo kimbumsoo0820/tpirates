@@ -5,14 +5,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { connectRouter } from "connected-react-router";
 
 import Filter from "./modules/filter";
-import Data from "./modules/data";
+
 import ScrollPage from "./modules/scrollPage";
 import NowPage from "./modules/nowPage";
 
 export const history = createBrowserHistory();
 const rootReducer = combineReducers({
   filter: Filter,
-  data: Data,
+
   scrollPage: ScrollPage,
   nowPage: NowPage,
   router: connectRouter(history),
@@ -21,10 +21,10 @@ const rootReducer = combineReducers({
 const middlewares = [thunk.withExtraArgument({ history: history })];
 const env = process.env.NODE_ENV;
 
-if (env === "development") {
-  const { logger } = require("redux-logger");
-  middlewares.push(logger);
-}
+// if (env === "development") {
+//   const { logger } = require("redux-logger");
+//   middlewares.push(logger);
+// }
 
 // 4. 리덕스 데브툴(redux devTools 설정)
 const composeEnhancers =

@@ -6,18 +6,28 @@ import StoreInfo from "../stores/StoreInfo";
 import StorePriceInfo from "../stores/StorePriceInfo";
 import StoreWalk from "../stores/StoreWalk";
 
+import { useSelector, useDispatch } from "react-redux";
+import { nowPageAction } from "../../redux/modules/nowPage";
+
 const StorePage = () => {
+  const dispatch = useDispatch();
   const [priceButton, setPriceButton] = React.useState(true);
   const [walkButton, setWalkButton] = React.useState(false);
 
   const [scrollPosition, setScrollPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    dispatch(nowPageAction.getNowPage("storePage"));
+  });
+
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+    console.log(window.scrollY || document.documentElement.scrollTop);
   };
   React.useEffect(() => {
     window.addEventListener("scroll", updateScroll);
     console.log(scrollPosition);
-  });
+  }, []);
 
   const priceOnclick = () => {
     if (priceButton !== true) {

@@ -24,22 +24,22 @@ export default class PauseOnHover extends Component {
         <Container>
           <Slider {...settings}>
             <div>
-              <h3>1</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
             <div>
-              <h3>2</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
             <div>
-              <h3>3</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
             <div>
-              <h3>4</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
             <div>
-              <h3>5</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
             <div>
-              <h3>6</h3>
+              <IMG src="/image/Coupon3.PNG" />
             </div>
           </Slider>
         </Container>
@@ -47,7 +47,11 @@ export default class PauseOnHover extends Component {
     );
   }
 }
-
+const IMG = styled.img`
+  width: 140px;
+  height: 73px;
+  cursor: pointer;
+`;
 const Container = styled.div`
   background-color: #f8f8f8;
   .slick-dots {

@@ -24,9 +24,9 @@ const MainPage = () => {
 
   const [page, setPage] = useState(1);
   // console.log("1");
-  dispatch(nowPageAction.getNowPage("mainPage"));
 
   React.useLayoutEffect(() => {
+    dispatch(nowPageAction.getNowPage("mainPage"));
     if (inView === true) {
       setPage(page + 1);
       dispatch(scrollPageAction.getScroll(page));
