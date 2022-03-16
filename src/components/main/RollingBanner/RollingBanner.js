@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import BannerData from "../../../data/bannerData.json";
+import { history } from "../../../redux/configureStore";
 
 const RollingBanner = () => {
   const [BannerDataSet, SetBannerDataSet] = React.useState(0);
@@ -25,9 +26,17 @@ const RollingBanner = () => {
       }
     }, 2200);
   }, [DropDownTrueOrFalse, BannerDataSet]);
+
+  const Page = () => {
+    history.push(`${BannerData.uri}`);
+  };
   return (
     <OutWrap>
-      <Wrap>
+      <Wrap
+        onClick={() => {
+          Page();
+        }}
+      >
         <RollingBannerDiv>
           <RollingString BannerDataSet={BannerDataSet}>
             {BannerStringSet.label} : {BannerStringSet.price}{" "}
