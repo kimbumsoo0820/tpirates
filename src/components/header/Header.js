@@ -14,6 +14,7 @@ const Header = () => {
 
   //추후 각 sort별 클릭 구현 (수산시장, 쇼핑몰, 도매)
   const [sort, setSort] = React.useState(SortData.sort);
+
   const refresh = () => {
     location.href = "/";
   };

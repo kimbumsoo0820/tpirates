@@ -6,18 +6,15 @@ import StoreData from "../../../data/storeData.json";
 import StoreCard from "./StoreCard";
 
 const StoreList = (props) => {
-  //   console.log(props);
   const nowPage = props.page;
-
-  const Item = props.FilterItem;
   const zone = props.FilterZone;
-
   const [filterStoreArr, setFilterStoreArr] = useState([]);
 
   function pushStoreToArr(zone) {
     setFilterStoreArr((filterStoreArr) => [...filterStoreArr, zone]);
   }
 
+  //지역에 따른 데이터 분류
   React.useEffect(() => {
     if (zone === "모든 지역") {
       setFilterStoreArr(StoreData);
@@ -32,6 +29,7 @@ const StoreList = (props) => {
     }
   }, []);
 
+  //가게 리스트 10개씩 slice
   const slicedStoreDataset = filterStoreArr.slice(0, 10 * nowPage);
 
   return (

@@ -23,8 +23,8 @@ const MainPage = () => {
   const FilterItem = useSelector(filterItem);
 
   const [page, setPage] = useState(1);
-  // console.log("1");
 
+  //무한스크롤 Intersection Observer
   React.useLayoutEffect(() => {
     dispatch(nowPageAction.getNowPage("mainPage"));
     if (inView === true) {

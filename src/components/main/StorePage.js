@@ -16,10 +16,12 @@ const StorePage = () => {
 
   const [scrollPosition, setScrollPosition] = React.useState(0);
 
+  //현재 페이지 저장(Header변경용)
   React.useEffect(() => {
     dispatch(nowPageAction.getNowPage("storePage"));
   });
 
+  //스크롤시 fix
   const updateScroll = () => {
     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     console.log(window.scrollY || document.documentElement.scrollTop);
@@ -28,14 +30,14 @@ const StorePage = () => {
     window.addEventListener("scroll", updateScroll);
     console.log(scrollPosition);
   }, []);
-
+  //가격정보
   const priceOnclick = () => {
     if (priceButton !== true) {
       setPriceButton(!priceButton);
       setWalkButton(!walkButton);
     }
   };
-
+  //탐방기
   const walkOnclick = () => {
     if (walkButton !== true) {
       setWalkButton(!walkButton);

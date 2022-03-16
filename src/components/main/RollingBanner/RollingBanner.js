@@ -11,10 +11,11 @@ const RollingBanner = () => {
 
   const [DropDownTrueOrFalse, SetDropDownTrueOrFalse] = React.useState(false);
 
+  //화살표 모양 반전
   const DropDownChange = () => {
     SetDropDownTrueOrFalse(!DropDownTrueOrFalse);
   };
-
+  //롤링배너 타이머
   React.useEffect(() => {
     setTimeout(() => {
       if (BannerDataSet >= 1) {

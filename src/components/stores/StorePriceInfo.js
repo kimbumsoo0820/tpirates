@@ -9,10 +9,11 @@ import PriceSectionMoreButton from "./PriceSectionMoreButton";
 const StorePriceInfo = () => {
   const [menuMore, setMenuMore] = React.useState(false);
   const [priceMore, setPriceMore] = React.useState(false);
-
+  //메뉴구성 상세보기
   const MenuMoreClick = () => {
     setMenuMore(!menuMore);
   };
+  //품목시세 상세보기
   const PriceMoreClick = () => {
     setPriceMore(!priceMore);
   };
