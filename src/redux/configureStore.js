@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { createBrowserHistory } from "history";
-import thunk from "redux-thunk";
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+
+import { createStore, combineReducers, compose } from "redux";
 import { connectRouter } from "connected-react-router";
 
 import Filter from "./modules/filter";
@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
   router: connectRouter(history),
 });
 
-const middlewares = [thunk.withExtraArgument({ history: history })];
+// const middlewares = [thunk.withExtraArgument({ history: history })];
 const env = process.env.NODE_ENV;
 
 // if (env === "development") {
@@ -34,8 +34,8 @@ const composeEnhancers =
       })
     : compose;
 
-const enhancer = composeEnhancers(applyMiddleware(...middlewares));
+// const enhancer = composeEnhancers(applyMiddleware(...middlewares));
 
-let store = (initialStore) => createStore(rootReducer, enhancer);
+let store = (initialStore) => createStore(rootReducer);
 
 export default store();

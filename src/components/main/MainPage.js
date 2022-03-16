@@ -51,6 +51,7 @@ const MainPage = () => {
           <Observer ref={ref}></Observer>
         </>
       )}
+      <IMG src="https://media.vlpt.us/images/kbs2082/post/22befa09-8d9f-40a2-b140-99e58f68eb57/image.png" />
     </Background>
   );
 };
@@ -66,5 +67,8 @@ const Observer = styled.div`
   /* background-color: white; */
 
   margin-top: -100px;
+`;
+const IMG = styled.img`
+  width: 100%;
 `;
 export default MainPage;
