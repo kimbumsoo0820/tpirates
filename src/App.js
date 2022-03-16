@@ -1,5 +1,5 @@
 /* eslint-disable */
-import "./App.css";
+
 import styled from "styled-components";
 
 import { ConnectedRouter } from "connected-react-router";

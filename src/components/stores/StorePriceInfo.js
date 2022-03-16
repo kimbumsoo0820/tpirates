@@ -67,6 +67,7 @@ const StorePriceInfo = () => {
           )}
         </PriceSelectionWrap>
       </Wrap>
+      <IMG src="https://media.vlpt.us/images/kbs2082/post/22befa09-8d9f-40a2-b140-99e58f68eb57/image.png" />
     </Wrap>
   );
 };
