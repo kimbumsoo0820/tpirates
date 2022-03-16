@@ -79,7 +79,7 @@ const Wrap = styled.div`
       }
     }
     button::before {
-      color: #e9e9e9;
+      color: #777777;
       width: 5px;
     }
   }

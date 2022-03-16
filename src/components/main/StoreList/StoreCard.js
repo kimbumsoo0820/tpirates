@@ -37,7 +37,8 @@ const StoreCard = (props) => {
           <PmediumGray>{description}</PmediumGray>
           <RatingLine>
             <Rating>
-              ⭐{summary.rating} <Comment>({summary.comments})</Comment>
+              <Star>★</Star>
+              {summary.rating} <Comment>({summary.comments})</Comment>
             </Rating>
             {openClose === "OPEN" && <TodayPrice>오늘시세</TodayPrice>}
             {openClose === "CLOSED" && <TodayPrice>전일시세</TodayPrice>}
@@ -47,6 +48,13 @@ const StoreCard = (props) => {
     </Wrap>
   );
 };
+
+const Star = styled.p`
+  margin-top: -2px;
+  margin-right: 2px;
+  color: #ff9300;
+  font-size: 15px;
+`;
 const Wrap = styled.div`
   width: 100%;
   height: 130px;
